@@ -21,7 +21,6 @@ class Evaluation(object):
         showatt=False,
         mode=None
     ):
-#         self.__num_class = cfg.VOC_DATA["NUM"]
         self.__num_class = cfg.Customer_DATA["NUM"]
         self.__conf_threshold = cfg.VAL["CONF_THRESH"]
         self.__nms_threshold = cfg.VAL["NMS_THRESH"]
@@ -32,7 +31,6 @@ class Evaluation(object):
         self.__visiual = visiual
         self.__eval = eval
         self.__mode = mode
-#         self.__classes = cfg.VOC_DATA["CLASSES"]
         self.__classes = cfg.Customer_DATA["CLASSES"]
 
         self.__model = Build_Model(showatt=self.__showatt).to(self.__device)
@@ -47,6 +45,7 @@ class Evaluation(object):
         weight = os.path.join(weight_path)
         chkpt = torch.load(weight, map_location=self.__device)
         self.__model.load_state_dict(chkpt["model"])
+#         self.__model.load_state_dict(chkpt["model"])
         print("loading weight file is done")
         del chkpt
 

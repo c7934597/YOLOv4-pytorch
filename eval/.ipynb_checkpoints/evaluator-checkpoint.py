@@ -132,8 +132,8 @@ class Evaluator(object):
         bboxes = self.__convert_pred(
             pred_bbox, test_shape, (org_h, org_w), valid_scale
         )
-        if self.showatt and len(img) and mode == 'det':
-            self.__show_heatmap(atten, org_img)
+#         if self.showatt and len(img) and mode == 'det':
+#             self.__show_heatmap(atten, org_img)
         return bboxes
 
     def __show_heatmap(self, beta, img):
