@@ -1,14 +1,16 @@
 # coding=utf-8
 # project
 import os.path as osp
-# PROJECT_PATH = osp.abspath(osp.join(osp.dirname(__file__), '..'))
-PROJECT_PATH = '/home/minggatsby/GitHub/datasets/MobilePhonesPascalVOC'
+PROJECT_PATH = osp.abspath(osp.join(osp.dirname(__file__), '..'))
 
-DATA_PATH = osp.join(PROJECT_PATH)
+DATA_PATH = osp.join(PROJECT_PATH, 'data')
 
-TRAIN_DATA_PATH = osp.join(PROJECT_PATH, 'Train', 'Images')
+TRAIN_DATA_PATH = osp.join(PROJECT_PATH, 'Train', 'JPEGImages')
 
-TEST_DATA_PATH = osp.join(PROJECT_PATH, 'Test', 'Images')
+TEST_DATA_PATH = osp.join(PROJECT_PATH, 'Test', 'JPEGImages')
+
+# (String)圖片副檔名
+IMAGE_NAME_EXTENSION = '.png'
 
 
 MODEL_TYPE = {

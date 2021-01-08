@@ -5,6 +5,12 @@ PROJECT_PATH = osp.abspath(osp.join(osp.dirname(__file__), '..'))
 
 DATA_PATH = osp.join(PROJECT_PATH, 'data')
 
+TRAIN_DATA_PATH = osp.join(PROJECT_PATH, 'Train', 'JPEGImages')
+
+TEST_DATA_PATH = osp.join(PROJECT_PATH, 'Test', 'JPEGImages')
+
+# (String)圖片副檔名
+IMAGE_NAME_EXTENSION = '.png'
 
 MODEL_TYPE = {
     "TYPE": "Mobilenetv3-YOLOv4"
@@ -46,8 +52,8 @@ VAL = {
 }
 
 Customer_DATA = {
-    "NUM": 3,  # your dataset number
-    "CLASSES": ["unknown", "person", "car"],  # your dataset class
+    "NUM": 1,  # your dataset number
+    "CLASSES": ["phone"],  # your dataset class
 }
 
 VOC_DATA = {
