@@ -25,7 +25,7 @@ TRAIN = {
     "DATA_TYPE": "Customer",  # DATA_TYPE: VOC ,COCO or Customer
     "TRAIN_IMG_SIZE": 416,
     "AUGMENT": True,
-    "BATCH_SIZE": 1,
+    "BATCH_SIZE": 64,
     "MULTI_SCALE_TRAIN": False,
     "IOU_THRESHOLD_LOSS": 0.5,
     "YOLO_EPOCHS": 50,
@@ -42,7 +42,7 @@ TRAIN = {
 # val
 VAL = {
     "TEST_IMG_SIZE": 416,
-    "BATCH_SIZE": 1,
+    "BATCH_SIZE": 64,
     "NUMBER_WORKERS": 0,
     "CONF_THRESH": 0.005,
     "NMS_THRESH": 0.45,
